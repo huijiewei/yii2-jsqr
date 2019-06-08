@@ -4,6 +4,8 @@ YII2 jsQR 二维码扫描扩展
 
 同一二维码每5秒才会 callback 一次
 
+演示地址：https://huijiewei.github.io/yii2-jsqr/
+
 ```php
 <?= \huijiewei\jsqr\JsQrWidget::widget([
     'id' => 'jsQR',

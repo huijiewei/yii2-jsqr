@@ -1,0 +1,35 @@
+{
+  "name": "huijiewei/yii2-jsqr",
+  "description": "A pure javascript QR code reading library. This library takes in raw images and will locate, extract and parse any QR code found within.",
+  "minimum-stability": "beta",
+  "license": "MIT",
+  "type": "yii2-extension",
+  "homepage": "https://github.com/huijiewei/yii2-jsqr.git",
+  "keywords": [
+    "yii2",
+    "extension",
+    "jsQR",
+    "assets"
+  ],
+  "authors": [
+    {
+      "name": "Huijie Wei",
+      "email": "huijiewei@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "yiisoft/yii2": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "huijiewei\\jsqr\\": "src"
+    }
+  },
+  "repositories": {
+    "asset": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.jsqr-toolbar {
+  line-height: 32px;
+}
+
+.jsqr-canvas {
+  width: 100%;
+  background: #bbbbbb;
+  background-size: cover;
+}

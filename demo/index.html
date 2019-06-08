@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yii jsQR Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./jsQR.scan.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="./jsQR.min.js"></script>
+    <script src="./jsQR.scan.js"></script>
+</head>
+<body>
+<h1>jsQR Demo</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-heading">二维码扫描演示</div>
+                <div class="panel-body">
+                    <div id="jsQR" class="jsqr">
+                        <div class="jsqr-start">
+                            <button class="btn btn-sm btn-default jsqr-btn-start">打开摄像头扫描二维码</button>
+                        </div>
+                        <div class="jsqr-wrap hidden">
+                            <canvas class="jsqr-canvas"></canvas>
+                            <div class="jsqr-toolbar clearfix">
+                                <div class="jsqr-message pull-left">请把二维码对准摄像头</div>
+                                <div class="pull-right jsqr-buttons">
+                                    <button class="btn btn-sm btn-warning jsqr-btn-close">关闭</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-heading">扫码记录</div>
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>二维码</th>
+                    </tr>
+                    </thead>
+                    <tbody id="scannedTbl">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    jQuery(function ($) {
+        $.jsQR($('#jsQR'), function (code) {
+            $('<tr><td>' + code + '</td></tr>').prependTo($('#scannedTbl')).fadeIn();
+        });
+    });</script>
+</body>
+</html>
